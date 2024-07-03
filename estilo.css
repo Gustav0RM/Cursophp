@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body{
+    background-color: black;
+    color: chartreuse;
+}
+.navega{
+    text-align: center;
+    word-spacing: 10px;
+    font-size: x-large;
+    
+ }
+.navega a{
+   
+        text-decoration: none;
+        color: cornflowerblue;
+    
+ }
+.navega a:hover{
+    
+        color: cornflowerblue;
+        text-decoration: underline;
+        
+ }
