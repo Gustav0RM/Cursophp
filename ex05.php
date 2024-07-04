@@ -14,7 +14,7 @@
     </header>
 
         <section>
-            <form action="ex05cad.php" method="get">
+            <form action="ex05cad.php" method="post">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="idnome">
                 <label for="sobrenome">Sobrenome</label>

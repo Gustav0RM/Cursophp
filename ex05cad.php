@@ -13,9 +13,11 @@
 
     <main>
         <?php
-        $nome = $_GET["nome"];
-        $sobrenome = $_GET["sobrenome"];
-        echo "<p>É um prazer te conhcer, $nome $sobrenome";
+        $nome = $_POST["nome"] ?: "sem nome";                      
+        $sobrenome = $_POST["sobrenome"] ?: "desconhecido";       
+        echo "<p>É um prazer te conhcer, $nome $sobrenome";  
+              /* ? : funciona como if else, CONDIÇÃO ? VALOR 1 : VALOR 2. Se CONDIÇÃO for verdadeiro, neste caso, 
+              se for preenchido, retorna o que foi preenchido, se não, retorna a string após os dois pontos.*/
         ?>
     <p class="navega">
         <a href="../Cursophp/ex06.php">Avançar</a>
