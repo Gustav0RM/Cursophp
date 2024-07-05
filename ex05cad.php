@@ -20,8 +20,8 @@
               se for preenchido, retorna o que foi preenchido, se não, retorna a string após os dois pontos.*/
         ?>
     <p class="navega">
-        <a href="../Cursophp/ex06.php">Avançar</a>
-        <a href="../Cursophp/ex05.php">Retornar</a>
+        <a href="../Cursophp/#">Avançar</a>
+        <a href="../Cursophp/ex05.html">Retornar</a>
 
     </p>
     </main>
