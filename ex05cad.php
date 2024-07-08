@@ -21,7 +21,7 @@
         ?>
     <p class="navega">
         <a href="../Cursophp/ex06.php">Avançar</a>
-        <a href="../Cursophp/ex05.php">Retornar</a>
+        <a href="../Cursophp/ex05.html">Retornar</a>
 
     </p>
     </main>
