@@ -1,4 +1,4 @@
-Regras para nomes identificadores
+------------Regras para nomes identificadores
 
 *Variáveis sempre começam com $
 *O segundo caractere pode ser uma letra ou _
@@ -7,7 +7,8 @@ Regras para nomes identificadores
 *Aceita caracteres acentuados como á, õ, ç
 *Nomes de varíaveis são case sensitive /  [Nome é != nome]
 
-Recomendações para nomear variáveis 
+------------Recomendações para nomear variáveis 
+
 *Nomes claros e de fácil identificação
 *Evitar nomes muito curtos ou muito longos
 *Padrão de nomeação, por exemplo, todas minúsculas ou todas maiúsculas, etc
@@ -15,16 +16,11 @@ Recomendações para nomear variáveis
 *camelCase para métodos e atributos
 *SNAKE_CASE para constantes 
 
-Anotações
+------------Anotações
+
 *Na variável de tipo int é possível representar números hexadecimais, binários e octais 
 0x = hexadecimal, 0b binário, 0 = octal;
 *Strings em php 
 - " " em aspas duplas existe a interpretação do conteúdo
 - ' ' não tem interpretação do conteúdo, irá exibir exatamente o que foi escrito
-- String Heredoc, uma string que intepreta o conteúdo em diversas linhas :
-
-echo <<< FRASE 
--------conteúdo que será interpretado--------
-         FRASE; 
-
-- String Nowdoc, é uma string que não interpreta o conteúdo porém exibe várias linhas;
+- Precedência  ( )  >  **  >  *, /,%  >  +,-

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>07 Transformador</title>
+</head>
+
+<body>
+    <section>
+        <form action="ex07.php" method="post">Decimal pra Binário
+            <label for="numero">Insira o número</label>
+            <input type="text" name="numero" id="idnumero">
+            <input type="submit" value="Transformar">
+        </form>
+
+        <?php
+        $numero = base_convert($_POST["numero"], 10, 2);
+
+        echo "<br>Valor em binário: $numero";
+        ?>
+
+
+        <p class="navega">
+            <a href="../Cursophp/ex08.php">Avançar</a>
+            <a href="../Cursophp/ex06.php">Retornar</a>
+
+        </p>
+    </section>
+
+
+</body>
+
+</html>
