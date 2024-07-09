@@ -20,7 +20,7 @@
 
 
         <?php
-        $_numero = rand(1, 10);
+        $_numero = mt_rand(1, 10);
         $chute = $_POST["chute"];
 
         if ($chute == $_numero)
@@ -35,8 +35,8 @@
         ?>
 
 
-<p class="navega">
-            <a href="../Cursophp/ex09.php">Avançar</a>
+        <p class="navega">
+            <a href="../Cursophp/ex09.html">Avançar</a>
             <a href="../Cursophp/ex07.php">Retornar</a>
 
         </p>
