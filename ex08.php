@@ -12,14 +12,13 @@
     <section>
         <form action="ex08.php" method="post">Advinhe o número
             <label for="chute">Insira um número de 1 a 10</label>
-            <input type="text" name="chute" id="idchute">
+            <input type="number" name="chute" id="idchute">
             <input type="submit" value="Enviar">
         </form>
 
-
-
-
         <?php
+        
+        //gerador de número aleatório
         $_numero = mt_rand(1, 10);
         $chute = $_POST["chute"];
 
@@ -37,7 +36,8 @@
 
         <p class="navega">
             <a href="../Cursophp/ex09.html">Avançar</a>
-            <a href="../Cursophp/ex07.php">Retornar</a>
+            <a href="../Cursophp/ex07.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
 
         </p>
     </section>

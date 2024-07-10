@@ -15,36 +15,49 @@
 
         <p>
             <?php
+            
             //Configuração para puxar sempre uma data atual da cotação
             $inicio = date("m-d-Y", strtotime("-7 days"));
             $fim = date("m-d-Y");
             //--------------------------------------------------------
 
             //configuração da API 
-
             $url = 'https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial=\'' . $inicio . '\'&@dataFinalCotacao=\'' . $fim . '\'&$top=1&$orderby=dataHoraCotacao%20desc&$format=json&$select=cotacaoCompra,dataHoraCotacao';
             $dados = json_decode(file_get_contents($url), true);
             $cotação = $dados["value"][0]["cotacaoCompra"];
             //---------------------------------------------------------------
 
-            $carteira = $_GET["carteira"]; //puxando dados do formulário
-            $converte = $carteira / $cotação; // conversão
+            //puxando dados do formulário
+            $carteira = $_GET["carteira"]; 
 
-            echo "R$ " . number_format($carteira, 2, ",", "." )."  equivalem a U$ ". number_format($converte,2, ",", ".")."<br>"; // FORMATAÇÃO PARA EXIBIR 2 casas decimais depois da vírgula e trocar o local da , pelo . 
+            // conversão
+            $converte = $carteira / $cotação; 
 
-            echo "<br>a cotação atual é de " . number_format($cotação,2, ",", ".");
+            // MÉTODO UTILIZANDO A FORMATAÇÃO PARA EXIBIR 2 casas decimais depois da vírgula e trocar o local da , pelo .
+
+            // echo "R$ " . number_format($carteira, 2, ",", "." )."  equivalem a U$ ". number_format($converte,2, ",", ".")."<br>";  
+
+            // echo "<br>a cotação atual é de " . number_format($cotação,2, ",", ".");
+            //-----------------------------------------------------------------------------
+
+            // utilizando método de internacionalização
+              $padrão = numfmt_create("pt_BR", NumberFormatter::CURRENCY); 
+
+            echo numfmt_format_currency($padrão, $carteira, "BRL") . "  equivalem a U$ " . number_format($converte, 2, ",", ".") . "<br>";
+            //------------------------------------------------------------------------------
+
             ?>
 
-            <a target="_blank" rel="external" href="https://dadosabertos.bcb.gov.br/dataset/dolar-americano-usd-todos-os-boletins-diarios/resource/43a16981-5a4b-47d9-b7bd-4c0c4093f994?inner_span=True">De acordo com o banco do Brasil &#127974;</a>
+            Cotação de acordo com o <a target="_blank" rel="external" href="https://dadosabertos.bcb.gov.br/dataset/dolar-americano-usd-todos-os-boletins-diarios/resource/43a16981-5a4b-47d9-b7bd-4c0c4093f994?inner_span=True"> Banco do Brasil &#127974;</a>
         </p>
 
 
         <p class="navega">
             <a href="../Cursophp/ex10.php">Avançar</a>
-            <a href="../Cursophp/ex09.html">Retornar</a>
+            <a href="../Cursophp/ex09.html">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
 
         </p>
-
     </section>
 
 </body>

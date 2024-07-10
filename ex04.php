@@ -10,6 +10,7 @@
     <main>
         <h1>Teste de tipos primitivos</h1>
         <?php
+        //array com diferentes tipos de variáveis 
         $vet = ["Gustavo", 22, 58.6, false];
         var_dump($vet);
         ?>
@@ -17,7 +18,8 @@
         
         <p class="navega">
             <a href="../Cursophp/ex05.html">Avançar</a>
-            <a href="../Cursophp/ex03.php">Retornar</a>
+            <a href="../Cursophp/ex03.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
         </p>
     </main>
 

@@ -10,6 +10,8 @@
 <body>
     <h1>
         <?php
+
+        //informações do servidorphp
         phpinfo(); 
         ?>
     </h1>
@@ -17,8 +19,8 @@
     
          <p class="navega">
              <a href="../Cursophp/ex02.php">Avançar</a>
-             <a href="../Cursophp/ex00.php">Retornar</a>
-             
+             <a href="../Cursophp/ex00.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
          </p>
     
     
