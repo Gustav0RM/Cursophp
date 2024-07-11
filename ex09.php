@@ -53,7 +53,7 @@
 
 
         <p class="navega">
-            <a href="../Cursophp/ex10.php">Avançar</a>
+            <a href="../Cursophp/ex10.html">Avançar</a>
             <a href="../Cursophp/ex09.html">Retornar</a><br>
             <a href="../Cursophp/">Index</a>
 
