@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>info Cadastro</title>
+    <title>05 info Cadastro</title>
 </head>
 <body>
     <head>
@@ -20,8 +20,8 @@
               se for preenchido, retorna o que foi preenchido, se não, retorna a string após os dois pontos.*/
         ?>
     <p class="navega">
-        <a href="../Cursophp/#">Avançar</a>
-        <a href="../Cursophp/ex05.html">Retornar</a>
+        <a href="../Cursophp/ex06.php">Avançar</a>
+        <a href="../Cursophp/ex05.php">Retornar</a>
 
     </p>
     </main>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Exercicio 0</title>
+    <title>00 Exercicio </title>
 </head>
 <body>
     <main>
@@ -13,7 +13,7 @@
              ?>
         </h1>
         <p>
-            Vamos tentar nos livrar da maldição
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore quia dicta vero cupiditate sequi dolorum ipsam fuga sit ratione cumque saepe sint, odio reprehenderit qui odit amet sed consectetur.
         </p>
                 <p class="navega">
                     <a href="../Cursophp/ex01.php">Avançar</a>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <title>Variáveis e constantes</title>
+    <title>03 Variáveis e constantes</title>
 </head>
 
 <body>
@@ -23,7 +23,8 @@
         ?>
         <p class="navega">
             <a href="../Cursophp/ex04.php">Avançar</a>
-            <a href="../Cursophp/ex02.php">Retornar</a>
+            <a href="../Cursophp/ex02.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
         </p>
     </main>
 </body>
