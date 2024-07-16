@@ -12,7 +12,7 @@
     <section>
         <form action="ex08.php" method="post">Advinhe o número
             <label for="chute">Insira um número de 1 a 10</label>
-            <input type="number" name="chute" id="idchute">
+            <input type="number" name="chute" id="idchute" value="0">
             <input type="submit" value="Enviar">
         </form>
 
@@ -20,7 +20,7 @@
         
         //gerador de número aleatório
         $_numero = mt_rand(1, 10);
-        $chute = $_POST["chute"];
+        $chute = $_POST["chute"]?? 0;
 
         if ($chute == $_numero)
             echo "Parabéns, você acertou, o número era $_numero";
