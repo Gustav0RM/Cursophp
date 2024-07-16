@@ -23,6 +23,7 @@
             <input type="submit" value="Enviar">
 
         </form>
+
         <?php
         $nota1 = $_POST["nota1"] ?: 0;
         $nota2 = $_POST["nota2"] ?: 0;
@@ -32,14 +33,18 @@
         $mediaponderada = (($nota1 * $peso1) + ($nota2 * $peso2)) / ($peso1 + $peso2);
 
         ?>
+
         <p class="navega">
             <a href="../Cursophp/ex15.php">Avançar</a>
             <a href="../Cursophp/ex13.php">Retornar</a><br>
             <a href="../Cursophp/">Index</a>
 
         </p>
+
     </main>
+
     <article>
+
         <h2>Calculo das médias</h2>
         <?php
         echo "
@@ -49,6 +54,7 @@
                 <li>A média aritmética ponderada é: " . number_format($mediaponderada, 1, ",", ".") . "</li>
             </ul>"
         ?>
+        
     </article>
 
 </body>

@@ -20,6 +20,7 @@
         </form>
 
         <?php
+        
         $num1 = $_POST["num1"] ?: 0;
         $divisor = $_POST["divisor"] ?: 1;
         $quociente = $num1 / $divisor;
@@ -31,6 +32,7 @@
         echo "<p>o número " . numfmt_format($formato, $num1) . " dividido por $divisor, dá " . numfmt_format($formato, $quociente) . " e sobra $resto"
 
         ?>
+
         <p class="navega">
             <a href="../Cursophp/ex13.php">Avançar</a>
             <a href="../Cursophp/ex11.html">Retornar</a><br>
