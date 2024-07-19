@@ -44,7 +44,7 @@
 
 
 <p class="navega">
-            <a href="../Cursophp/ex12.html">Avançar</a>
+            <a href="../Cursophp/ex12.php">Avançar</a>
             <a href="../Cursophp/ex11.html">Retornar</a><br>
             <a href="../Cursophp/">Index</a>
 
