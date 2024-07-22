@@ -30,8 +30,17 @@
 
             <input type="submit" value="Calcular">
         </form>
-        <br>
-        <article>
+
+        <p class="navega">
+            <a href="../Cursophp/ex17.php">Avançar</a>
+            <a href="../Cursophp/ex15.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
+
+        </p>
+
+    </main>
+
+    <article>
 
             <h2>Resultado final</h2>
 
@@ -40,8 +49,6 @@
             ?>
 
         </article>
-
-    </main>
 
 </body>
 
