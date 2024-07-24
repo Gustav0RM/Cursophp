@@ -40,7 +40,7 @@
     <article>
             <h2>Resultado do reajuste</h2>
             <?php
-             echo "O produto que custava ".numfmt_format_currency($formatação, $preço, "BRL")." com aumento de $porcentagem% vai passar a custar".numfmt_format_currency($formatação, $reajuste, "BRL");
+             echo "O produto que custava ".numfmt_format_currency($formatação, $preço, "BRL")." com aumento de $porcentagem% vai passar a custar ".numfmt_format_currency($formatação, $reajuste, "BRL");
             ?>
 
     </article>

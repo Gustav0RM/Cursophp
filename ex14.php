@@ -31,6 +31,7 @@
         $peso2 = $_POST["peso2"] ?: 1;
         $mediasimples = ($nota1 + $nota2) / 2;
         $mediaponderada = (($nota1 * $peso1) + ($nota2 * $peso2)) / ($peso1 + $peso2);
+        $formatação = numfmt_create("pt_BR", NumberFormatter::TYPE_DEFAULT);
 
         ?>
 
@@ -48,10 +49,10 @@
         <h2>Calculo das médias</h2>
         <?php
         echo "
-            <p>Primeira nota: " . number_format($nota1, 1, ",", ".") . " e peso $peso1, segunda nota: " . number_format($nota2, 1, ",", ".") . " e peso $peso2:</p>
+            <p>Primeira nota: " . numfmt_format($formatação, $nota1) . " e peso $peso1, segunda nota: " . numfmt_format($formatação, $nota2). " e peso $peso2:</p>
             <ul>
-                <li>A média aritmética simples é: " . number_format($mediasimples, 1, ",", ".") . "</li><br>
-                <li>A média aritmética ponderada é: " . number_format($mediaponderada, 1, ",", ".") . "</li>
+                <li>A média aritmética simples é: " . numfmt_format($formatação, $mediasimples) . "</li><br>
+                <li>A média aritmética ponderada é: " . numfmt_format($formatação, $mediaponderada). "</li>
             </ul>"
         ?>
         

@@ -13,9 +13,9 @@
 
         <form action="ex12.php" method="post">Anatomia de divisão
             <label for="num1">Insira o numero</label>
-            <input type="number" name="num1" id="num1" step="0.01">
+            <input type="number" name="num1" id="num1" step="0.01" min="0">
             <label for="num2">Insira o divisor</label>
-            <input type="number" name="divisor" id="divisor">
+            <input type="number" name="divisor" id="divisor" min="1">
             <input type="submit" value="Analisar">
         </form>
 
@@ -29,9 +29,20 @@
         //formatador para exibir as casas decimais conforme forem inseridas, e caso não sejam inseridas, não aparecerem. E trocar local do . por , 
         $formato = numfmt_create("pt_BR", NumberFormatter::TYPE_DEFAULT);
 
-        echo "<p>o número " . numfmt_format($formato, $num1) . " dividido por $divisor, dá " . numfmt_format($formato, $quociente) . " e sobra $resto"
+        echo "<p>o número " . numfmt_format($formato, $num1) . " dividido por $divisor, dá " . numfmt_format($formato, $quociente) . " e sobra $resto";
 
         ?>
+
+        <table class="divisao">
+            <tr>
+                <td><?= $num1?></td>
+                <td><?= $divisor ?></td>
+            </tr>
+            <tr>
+                <td><?= $resto?></td>
+                <td><?= $quociente?></td>
+            </tr>
+        </table>
 
         <p class="navega">
             <a href="../Cursophp/ex13.php">Avançar</a>

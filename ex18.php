@@ -27,20 +27,17 @@
     <?php
         $formatação = numfmt_create("pt_BR", NumberFormatter::CURRENCY);
         $valor = $_POST["valor"]? : 0;
-        $divcem = $valor / 100;
-        $qtdnotacem = (int) $divcem;
+
+        $qtdnotacem = intdiv($valor, 100);
         $sobracem = $valor % 100;
         //-----------------------------
-        $divcinq = $sobracem / 50;
-        $qtdnotacinq = (int) $divcinq;
+        $qtdnotacinq = intdiv($sobracem, 50);
         $sobracinq = $sobracem % 50;
         //-----------------------------
-        $divdez = $sobracinq / 10;
-        $qtdnotadez = (int) $divdez;
+        $qtdnotadez = intdiv($sobracinq, 10);
         $sobradez = $sobracinq % 10;
         //-----------------------------
-        $divcinco = $sobradez / 5;
-        $qtdnotacinco = (int) $divcinco;
+        $qtdnotacinco = intdiv($sobradez, 5);
 
 
     ?>
