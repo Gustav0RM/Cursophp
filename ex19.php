@@ -24,15 +24,27 @@
     </main>
     <?php 
         $segundos = $_POST["segundos"]? : 0;
-        $calcsegundos = $segundos / 60;
-        $qtdsegundos = $segundos % 60;
-        $calcminutos = $calcsegundos / 60;
-        $qtdminutos = $calcsegundos % 60;
-        $calchoras = $calcminutos / 24;
-        $qtdhoras = $calcminutos % 24;
-        $calcdias = $calchoras / 7;
-        $qtddias = $calchoras % 7;
-        $qtdsemanas = (int) $calcdias;
+
+        //Cálculo utilizado pelo professor
+        $calcsemanas = intdiv($segundos, 604800);
+        $sobrasemanas = $segundos % 604800;
+        $calcdias = intdiv($sobrasemanas, 86400);
+        $sobradias = $sobrasemanas % 86400;
+        $calchoras = intdiv($sobradias, 3600);
+        $sobrahoras = $sobradias % 3600;
+        $calcminutos = intdiv($sobrahoras, 60);
+        $sobrasegundos = $sobrahoras % 60;
+
+        // Cálculo utilizado por mim
+        // $calcsegundos = $segundos / 60;
+        // $qtdsegundos = $segundos % 60;
+        // $calcminutos = $calcsegundos / 60;
+        // $qtdminutos = $calcsegundos % 60;
+        // $calchoras = $calcminutos / 24;
+        // $qtdhoras = $calcminutos % 24;
+        // $calcdias = $calchoras / 7;
+        // $qtddias = $calchoras % 7;
+        // $qtdsemanas = (int) $calcdias;
 
     ?>
     <article>
@@ -40,11 +52,11 @@
         <?php 
             echo "Analisando o valor inserido, <strong>".number_format($segundos, 0, "," , "."). " segundos,</strong> equivalem a um total de:
                   <ul>
-                    <li>$qtdsemanas semanas</li>
-                    <li>$qtddias dias</li>
-                    <li>$qtdhoras horas</li>
-                    <li>$qtdminutos minutos</li>
-                    <li>$qtdsegundos segundos</li>
+                    <li>$calcsemanas semanas</li>
+                    <li>$calcdias dias</li>
+                    <li>$calchoras horas</li>
+                    <li>$calcminutos minutos</li>
+                    <li>$sobrasegundos segundos</li>
                   </ul>"
         ?>
     </article>

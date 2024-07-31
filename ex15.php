@@ -22,7 +22,7 @@
         <form action="ex15.php" method="post">
             <h2>Calculando sua idade</h2>
             <label for="nascimento">Em que ano você nasceu?</label>
-            <input type="number" name="nascimento" id="nascimento">
+            <input type="number" name="nascimento" id="nascimento" max="<?php echo date("Y");?>">
             <label for="ano">Quer saber sua idade em que ano? Estamos em <?php echo date("Y");?></label>
             <input type="number" name="ano" id="ano">
             <input type="submit" value="Enviar">
