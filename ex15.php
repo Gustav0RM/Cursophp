@@ -12,8 +12,8 @@
 
     <?php
     date_default_timezone_set("America/Sao_Paulo");
-    $nascimento = $_POST["nascimento"]? : 0;
-    $ano = $_POST["ano"]? : 0;
+    $nascimento = $_POST["nascimento"] ?: 0;
+    $ano = $_POST["ano"] ?: 0;
     $calc = $ano - $nascimento;
     ?>
 
@@ -22,8 +22,8 @@
         <form action="ex15.php" method="post">
             <h2>Calculando sua idade</h2>
             <label for="nascimento">Em que ano você nasceu?</label>
-            <input type="number" name="nascimento" id="nascimento" max="<?php echo date("Y");?>">
-            <label for="ano">Quer saber sua idade em que ano? Estamos em <?php echo date("Y");?></label>
+            <input type="number" name="nascimento" id="nascimento" max="<?php echo date("Y"); ?>">
+            <label for="ano">Quer saber sua idade em que ano? Estamos em <?php echo date("Y"); ?></label>
             <input type="number" name="ano" id="ano">
             <input type="submit" value="Enviar">
         </form>
@@ -37,13 +37,18 @@
     </main>
 
     <article>
-            <h2>Resultado</h2>
-            <p>
-                <?php 
-                echo "Quem nasceu em $nascimento, vai ter <strong>$calc</strong> anos em $ano"
-                ?>
-            </p>
-        </article>
+        <p>
+            <?php
+            if ($ano < $nascimento) {
+                echo "<h2>Erro</h2><br>
+                Data inserida menor que data de nascimento";
+            } else {
+                echo "<h2>Resultado</h2><br>
+                Quem nasceu em $nascimento, vai ter <strong>$calc</strong> anos em $ano";
+            }
+            ?>
+        </p>
+    </article>
 </body>
 
 </html>
