@@ -11,39 +11,46 @@
 </head>
 
 <body>
-    <form action="ex21.php" method="post">
-        <div class="row m-0" style="background-color: white; padding:15px; border-radius:10px;">
-            <div class="col-sm-4">
-                Notas em Matemática
-                <label for="nota1mat">Insira sua nota</label>
-                <input type="number" name="nota1mat" id="nota1mat" step="0.1" min="0" max="10">
-                <label for="nota2mat">Insira sua segunda nota</label>
-                <input type="number" name="nota2mat" id="nota2mat" step="0.1" min="0" max="10">
-                <label for="nota3mat">Insira sua terceira nota</label>
-                <input type="number" name="nota3mat" id="nota3mat" step="0.1" min="0" max="10">
+    <main>
+        <form action="ex21.php" method="post">
+            <div class="row m-0">
+                <div class="col-sm-4">
+                    Notas em Matemática
+                    <label for="nota1mat">Insira sua nota</label>
+                    <input type="number" name="nota1mat" id="nota1mat" step="0.1" min="0" max="10">
+                    <label for="nota2mat">Insira sua segunda nota</label>
+                    <input type="number" name="nota2mat" id="nota2mat" step="0.1" min="0" max="10">
+                    <label for="nota3mat">Insira sua terceira nota</label>
+                    <input type="number" name="nota3mat" id="nota3mat" step="0.1" min="0" max="10">
+                </div>
+                <div class="col-sm-4">
+                    Notas em Ciência
+                    <label for="nota1cie">Insira sua nota</label>
+                    <input type="number" name="nota1cie" id="nota1cie" step="0.1" min="0" max="10">
+                    <label for="nota2cie">Insira sua segunda nota</label>
+                    <input type="number" name="nota2cie" id="nota2cie" step="0.1" min="0" max="10">
+                    <label for="nota3cie">Insira sua terceira nota</label>
+                    <input type="number" name="nota3cie" id="nota3cie" step="0.1" min="0" max="10">
+                </div>
+                <div class="col-sm-4">
+                    Notas em Artes
+                    <label for="nota1art">Insira sua nota</label>
+                    <input type="number" name="nota1art" id="nota1art" step="0.1" min="0" max="10">
+                    <label for="nota2art">Insira sua segunda nota</label>
+                    <input type="number" name="nota2art" id="nota2art" step="0.1" min="0" max="10">
+                    <label for="nota3art">Insira sua terceira nota</label>
+                    <input type="number" name="nota3art" id="nota3art" step="0.1" min="0" max="10">
+                </div>
+                <div class="col-sm-12"><input type="submit" value="Verificar"></div>
             </div>
-            <div class="col-sm-4">
-                Notas em Ciência
-                <label for="nota1cie">Insira sua nota</label>
-                <input type="number" name="nota1cie" id="nota1cie" step="0.1" min="0" max="10">
-                <label for="nota2cie">Insira sua segunda nota</label>
-                <input type="number" name="nota2cie" id="nota2cie" step="0.1" min="0" max="10">
-                <label for="nota3cie">Insira sua terceira nota</label>
-                <input type="number" name="nota3cie" id="nota3cie" step="0.1" min="0" max="10">
-            </div>
-            <div class="col-sm-4">
-                Notas em Artes
-                <label for="nota1art">Insira sua nota</label>
-                <input type="number" name="nota1art" id="nota1art" step="0.1" min="0" max="10">
-                <label for="nota2art">Insira sua segunda nota</label>
-                <input type="number" name="nota2art" id="nota2art" step="0.1" min="0" max="10">
-                <label for="nota3art">Insira sua terceira nota</label>
-                <input type="number" name="nota3art" id="nota3art" step="0.1" min="0" max="10">
+        </form>
+        <p class="navega">
+            <a href="../Cursophp/ex22.php">Avançar</a>
+            <a href="../Cursophp/ex20.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
 
-            </div>
-            <div class="col-sm-12"><input type="submit" value="Verificar"></div>
-        </div>
-    </form>
+        </p>
+    </main>
 
 
 
@@ -158,7 +165,6 @@
             </table>
         </div>
     </div>
-
 
 </body>
 

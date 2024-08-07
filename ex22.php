@@ -18,7 +18,7 @@
             <label for="valor3">Insira o terceiro número</label>
             <input type="number" name="valor3" id="valor3">
             <label for="operações">Operação</label>
-            
+
             <select name="opções" id="opções">
                 <option value="1" selected hidden>--Selecione--</option>
                 <option value="2">Soma</option>
@@ -28,6 +28,12 @@
             </select>
             <input type="submit" value="Calcular">
         </form>
+        <p class="navega">
+            <a href="../Cursophp/ex23.php">Avançar</a>
+            <a href="../Cursophp/ex21.php">Retornar</a><br>
+            <a href="../Cursophp/">Index</a>
+
+        </p>
     </main>
 
     <?php
