@@ -44,7 +44,7 @@
 		}
 		while ($populacaoB < $populacaoA);
 	} 
-	elseif ($populacaoA == 0 && $populacaoB == 0) 
+	elseif ($populacaoA == $populacaoB) 
 	{
 		echo "<br>Insira um número válido<br>";
 	}
