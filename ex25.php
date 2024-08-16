@@ -40,7 +40,6 @@
 		{
 		$populacaoB += $aumento;
 		$count++;
-		echo $count;
 		}
 		while ($populacaoB < $populacaoA);
 	} 
