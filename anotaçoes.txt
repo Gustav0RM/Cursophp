@@ -25,3 +25,18 @@
 - ' ' não tem interpretação do conteúdo, irá exibir exatamente o que foi escrito
 - Precedência  ( )  >  **  >  *, /,%  >  +,-
 *comentar várias linhas CTRL + ;
+
+------------Estruturas condicionais
+
+if é usado para executar um bloco de código caso a condição especificada seja VERDADEIRA
+else será utilizado para executar outro bloco de código caso a condição especificada no if seja FALSA
+else if é utilizado para especificar uma nova condição a ser testada CASO a primeira condição seja FALSA
+
+----------- ATRIBUIÇÃO
+
+$a += $b 	$a = $a + $b 	Adição
+$a -= $b 	$a = $a - $b 	Subtração
+$a *= $b 	$a = $a * $b 	Multiplicação
+$a /= $b 	$a = $a / $b 	Divisão
+$a %= $b 	$a = $a % $b 	Módulo
+$a **= $b 	$a = $a ** $b 	Exponentiation
