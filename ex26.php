@@ -12,7 +12,7 @@
 
 <form action="ex26.php" method="post">Números ímpares até determinado número
  <label for="nummax">Insira um número inteiro</label>
- <input type="number" name="nummax" id="nummax">
+ <input type="number" name="nummax" id="nummax" min="1">
  <input type="submit" value="Verificar">
 </form>
 
@@ -31,7 +31,7 @@
 
 $count = 1;
 $nummax = $_POST["nummax"]? : 0;
-$quantidade = intdiv($nummax, 2); 
+$quantidade = $nummax / 2;
 $soma = 0;
 
 if($nummax >= 1)
@@ -44,12 +44,22 @@ if($nummax >= 1)
  $count+=2;
 }
  echo "<br>";
- echo "<br><strong>Quantidade de números ímpares :</strong> $quantidade <br>";
- echo "<br><strong>Soma dos números ímpares :</strong> $soma";
 }
 else
 {
  echo "Insira um valor válido";
+}
+
+// condição para exibir a quantidade total de números ímpares
+ if($nummax % 2 != 0)
+ {
+ echo "<br><strong>Quantidade de números ímpares :</strong> ". $quantidade + 0.50 ."<br>";
+ echo "<br><strong>Soma dos números ímpares :</strong> $soma";
+ }
+else
+{
+  echo "<br><strong>Quantidade de números ímpares :</strong> $quantidade <br>";
+  echo "<br><strong>Soma dos números ímpares :</strong> $soma";
 }
 
 ?>
