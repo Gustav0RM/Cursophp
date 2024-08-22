@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +9,56 @@
   <title>Estruturas de repetição</title>
 
 </head>
+
 <body>
 
-<main>
+  <main>
 
-<form action="ex27.php" method="post">Números inteiros entre um intervalo de dois números
-  <label for="numeromin">Insira o número mínimo</label>
-  <input type="number" name="numeromin" id="numeromin">
-  <label for="numeromax">Insira o número máximo</label>
-  <input type="number" name="numeromax" id="numeromax">
-  <input type="submit" value="Verificar">
-</form>
+    <form action="ex27.php" method="post">Números inteiros entre um intervalo de dois números
+      <label for="numeromin">Insira o número mínimo</label>
+      <input type="number" name="numeromin" id="numeromin">
+      <label for="numeromax">Insira o número máximo</label>
+      <input type="number" name="numeromax" id="numeromax">
+      <input type="submit" value="Verificar">
+    </form>
 
-<p class="navega">
-    <a href="../Cursophp/ex28.php">Avançar</a>
-    <a href="../Cursophp/ex26.php">Retornar</a><br>
-    <a href="../Cursophp/">Index</a>
+    <p class="navega">
+      <a href="../Cursophp/ex28.php">Avançar</a>
+      <a href="../Cursophp/ex26.php">Retornar</a><br>
+      <a href="../Cursophp/">Index</a>
 
-  </p>
+    </p>
 
-</main>
+  </main>
 
-<article>
+  <article> <?php
+  $numeromin = $_POST["numeromin"] ?: 0;
+  $numeromax = $_POST["numeromax"] ?: 0;
+  $count = $numeromin + 1;
+  $soma = 0;
+  $quantidade = $numeromax - 2; // quantidade de números no intervalo
 
-<?php
-$numeromin = $_POST["numeromin"]? : 0;
-$numeromax = $_POST["numeromax"]? : 0;
-$count = $numeromin + 1;
-$soma = 0;
-$quantidade = $numeromax - 2; // quantidade de números no intervalo
+  if ($numeromin < $numeromax)
+    {
+      echo "<strong>Números do intervalo:</strong> ";
 
-if($numeromin < $numeromax)
-{
+      while ($count < $numeromax) 
+        {
+        echo $count . "\n"; //numeros no intervalo
+        $soma += $count; // soma dos números do intervalo, $soma = $soma + $count 
+        $count++;
+        }
+      echo "<br>";
+      echo "<br><strong>Quantidade de números no intervalo:</strong> " . $quantidade . "<br>";
+      echo "<br><strong>Soma entre os números do intervalo:</strong> " . $soma;
+    } 
+  else 
+    {
+    echo "O número mínimo precisa ser menor que o número máximo";
+    } ?>
 
- echo "<strong>Números do intervalo:</strong> ";
+  </article>
 
-while($count < $numeromax)
-{
- echo $count. "\n"; //numeros no intervalo
- $soma += $count; // soma dos números do intervalo, $soma = $soma + $count 
- $count++;      
-
-}
- echo "<br>";
- echo "<br><strong>Quantidade de números no intervalo:</strong> ". $quantidade. "<br>"; 
- echo "<br><strong>Soma entre os números do intervalo:</strong> ". $soma;
-
-}
-else
-{
- echo "O número mínimo precisa ser menor que o número máximo";
-}
-?>
-
-</article>
-  
 </body>
+
 </html>
