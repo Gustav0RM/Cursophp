@@ -9,15 +9,21 @@
 
 <body>
   <main>
-    <form action="ex29.php" method="post"> <?php
+    <form action="ex29.php" method="post">Identificando números <?php
       while ($count_2 < 5)
         {
         $count_2++; ?>
-        <label for="num<?=$count_2?>">Insira o primeiro número</label>
+        <label for="num<?=$count_2?>">Insira um número</label>
         <input type="number" name="num<?=$count_2?>" id="num<?$count_2?>"> <?php
         } ?>
       <input type="submit" value="Verificar">
     </form>
+    <p class="navega">
+      <a href="../Cursophp/ex30.php">Avançar</a>
+      <a href="../Cursophp/ex28.php">Retornar</a><br>
+      <a href="../Cursophp/">Index</a>
+
+    </p>
   </main> <?php
 
   if (isset($_POST["num1"]))
