@@ -31,7 +31,7 @@
     {
     $base = $_POST["base"]?:0;
     $expoente = $_POST["expoente"]?:0;
-    $resultado = $base;
+    $resultado = $base; // variavel criada para poder exibir de forma correta no else abaixo, caso utilizasse base *= base, a exibição não seria correta
 
     if ($expoente == 0)
       {
