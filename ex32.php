@@ -26,21 +26,24 @@
   <article> <?php
 
     if (isset($_POST["repeticao"]))
-    {
-    $repeticao = $_POST["repeticao"]?:0;
-    
-    $penultimo = 0;
-    $ultimo = 1;
-    echo "0 1 ";
-
-    for ($count = 1; $count <= $repeticao - 2; $count++)
       {
-      $atual = $penultimo + $ultimo;
-      echo $atual . "\n";
-      $penultimo = $ultimo;
-      $ultimo = $atual;
+      $repeticao = $_POST["repeticao"]?:0;
+      $penultimo = 0;
+      $ultimo = 1;
+      echo "0 1 ";
+      
+      for ($count = 1; $count <= $repeticao - 2; $count++)
+        {
+        $atual = $penultimo + $ultimo;
+        echo $atual . "\n";
+        $penultimo = $ultimo;
+        $ultimo = $atual;
+        }
       }
-    } ?>
+    else
+      {
+      echo "Insira um valor";
+      } ?>
 
   </article>
     
