@@ -40,9 +40,9 @@
     else
       {
       for ($count_A = 1; $count_A < $expoente; $count_A++)
-      {
-      $resultado *= $base;
-      }
+        {
+        $resultado *= $base;
+        }
       echo "<article>$base elevado a $expoente = $resultado</article>";
       }
     }

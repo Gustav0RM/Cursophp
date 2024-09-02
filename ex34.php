@@ -15,7 +15,7 @@
   <main>
     <form action="ex34.php" method="post">Fatorial
       <label for="inteiro">Insira um numero inteiro</label>
-      <input type="number" name="inteiro" id="inteiro">
+      <input type="number" name="inteiro" id="inteiro" min="0">
       <input type="submit" value="Calcular">
     </form>
     <p class="navega">

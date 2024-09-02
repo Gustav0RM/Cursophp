@@ -37,6 +37,7 @@
     for ($count_B = 1; $count_B <= 5; $count_B++)
       {
       $numero = $_POST["numero" . $count_B]?:0;
+      // $numero receberá o que foi preenchido nos campos gerados no formulário acima, concatenando "numero" . $count_B, que vai retornar "numero1", "numero2", etc
       if ($numero % 2 ==0)
         {
         $quantidade_par++; 

@@ -32,6 +32,14 @@ if é usado para executar um bloco de código caso a condição especificada sej
 else será utilizado para executar outro bloco de código caso a condição especificada no if seja FALSA
 else if é utilizado para especificar uma nova condição a ser testada CASO a primeira condição seja FALSA
 
+-----------Estruturas de repetição
+
+while é usado para repetir um determinado bloco de código enquanto a condição especificada for verdadeira(verifica primeiro, faz depois).
+Do while é semelhante ao while porém a validação da condição vem depois da execução do bloco de código
+(faz primeiro, verifica depois).
+For é utilizado quando você sabe a quantidade de vezes que precisará ser executado. É composto por 3 expressões; A primeira é normalmente utilizada para inicializar a variável que servirá como contador, a segunda expressão pode conter mais de uma condição, e o loop continuará enquanto a última condição for verdadeira e a última expressão normalmente é utilizada para incrementar o contador.
+
+
 ----------- ATRIBUIÇÃO
 
 $a += $b 	$a = $a + $b 	Adição
