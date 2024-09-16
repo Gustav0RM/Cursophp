@@ -12,14 +12,18 @@
       for ($count = 1; $count <= 5; $count++)
         { ?>
         <label for="dado<?=$count?>">Insira o dado <?=$count?></label>
-        <input type="number" name="dado<?=$count?>" id="dado<?=$count?>"><?php
+        <input type="number" name="dado[<?=$count?>]" id="dado<?=$count?>"><?php
         } ?>
       <input type="submit" value="Verificar">
     </form>
   </main>
   <article><?php
 
-    $array = array($dado1 = $_POST["dado1"],$dado2 = $_POST["dado2"],$dado3 = $_POST["dado3"],$dado4 = $_POST["dado4"],$dado5 = $_POST["dado5"]);
+    $array = $_POST['dado'];
+    foreach ($array as $chave => $valor)
+        {
+        
+        }
     var_dump($array);
     ?>
     
