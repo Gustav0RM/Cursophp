@@ -21,10 +21,9 @@
 
     $array = $_POST['dado'];
     foreach ($array as $chave => $valor)
-        {
-        
-        }
-    var_dump($array);
+      {
+      echo "chave $chave e valor $valor<br>";
+      }
     ?>
     
   </article>
