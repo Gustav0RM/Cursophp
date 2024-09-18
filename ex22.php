@@ -41,27 +41,34 @@
     $valor2 = $_POST["valor2"] ?: 0;
     $valor3 = $_POST["valor3"] ?: 0;
     $opções = $_POST["opções"];
-    ?>
-    <article>
-        <?php
+  
         switch ($opções) {
             case 1:
-                echo "<p>Selecione uma operação</p>";
+                echo "<article>
+                        <p>Selecione uma operação</p>
+                      </article>";
                 break;
             case 2:
-                echo "<p>A soma é: " . $valor1 + $valor2 + $valor3 . "</p>";
+                echo "<article>
+                        <p>A soma é: " . $valor1 + $valor2 + $valor3 . "</p>
+                      </article>";
                 break;
             case 3:
-                echo "<p>A subtração é: " . $valor1 - $valor2 - $valor3 . "</p>";
+                echo "<article>
+                        <p>A subtração é: " . $valor1 - $valor2 - $valor3 . "</p>
+                      </article>";
                 break;
             case 4:
-                echo "<p>A divisão é: " . $valor1 / $valor2 / $valor3 . "</p>";
+                echo "<article>
+                        <p>A divisão é: " . $valor1 / $valor2 / $valor3 . "</p>
+                      </article>";
                 break;
             case 5:
-                echo "<p>A multiplicação é: " . $valor1 * $valor2 * $valor3 . "</p>";
+                echo "<article>
+                        <p>A multiplicação é: " . $valor1 * $valor2 * $valor3 . "</p>
+                     </article>";
         }
         ?>
-    </article>
 </body>
 
 </html>

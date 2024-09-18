@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../Estilos/estilos.css">
+    <style>
+    a 
+      {
+      color: #15142b;
+      background-color: rgba(55, 41, 145, 0.1);
+      padding: 0 3px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: .5px dotted #372991;
+      }
+    a:hover 
+      {
+      color: #867faf;
+      border-bottom: 1px solid #372991;
+      }
+  </style>
     <title>Calculo de media</title>
 </head>
 
