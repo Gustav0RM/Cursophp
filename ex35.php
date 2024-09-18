@@ -16,16 +16,22 @@
         } ?>
       <input type="submit" value="Verificar">
     </form>
-  </main>
-  <article><?php
-
-    $array = $_POST['dado'];
-    foreach ($array as $chave => $valor)
-      {
-      echo "chave $chave e valor $valor<br>";
-      }
+    <p class="navega">
+      <a href="../Cursophp/ex36.php">Avançar</a>
+      <a href="../Cursophp/ex34.php">Retornar</a><br>
+      <a href="../Cursophp/">Index</a>
+    </p>
+  </main> <?php
+  if(isset($_POST["dado"]));
+  {
+  $array = $_POST['dado'];
+  foreach ($array as $chave => $valor)
+    {
+    echo "<article>chave $chave e valor $valor</article>";
+    }
+  }
     ?>
     
-  </article>
+ 
 </body>
 </html>
