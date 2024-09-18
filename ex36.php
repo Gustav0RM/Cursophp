@@ -26,6 +26,11 @@
       <input type="submit" value="Enviar">
       </div><!--final da linha -->
     </form>
+    <p class="navega">
+      <a href="../Cursophp/ex37.php">Avançar</a>
+      <a href="../Cursophp/ex35.php">Retornar</a><br>
+      <a href="../Cursophp/">Index</a>
+    </p>
   </main> 
 
   <article>
@@ -37,21 +42,22 @@
           <th>Idade</th>
         </tr>
       </thead>
-
       <tbody> <?php
-        $memoria = $_POST["dados"];
-        
-        // Dividimos o array em grupos de 3 (nome, sobrenome, idade)
-        $grupos = array_chunk($memoria, 3);
 
-        foreach ($grupos as $grupo) 
+        if (isset ($_POST["dados"]));
           {
-          echo "<tr>";
-          foreach ($grupo as $valor) 
+          $array_memoria = (array) $_POST['dados'];
+          // Dividimos o array em grupos de 3, cada grupo com 1 nome, 1 sobrenome e 1 idade
+          $grupos = array_chunk($array_memoria, 3);
+          foreach ($grupos as $grupo) 
             {
-            echo "<td>$valor</td>";
+            echo "<tr>";
+            foreach ($grupo as $valor) 
+              {
+              echo "<td>$valor</td>";
+              }
+            echo "</tr>";
             }
-          echo "</tr>";
           }?>
       </tbody>
     </table>
