@@ -12,34 +12,50 @@
   <main>
     <form action="ex36.php" method="post">
       <div class="row m-0"><?php
-        for ($count = 1; $count < 4; $count++)
+        for ($count = 0; $count < 3; $count++)
           {?>
           <div class="col-sm-4">
             <label for="nome">Nome</label>
-            <input type="text" name="memoria[]" id="nome">
+            <input type="text" name="dados[]" id="nome">
             <label for="sobrenome">Sobrenome</label>
-            <input type="text" name="memoria[]" id="sobrenome">
+            <input type="text" name="dados[]" id="sobrenome">
             <label for="idade">Idade</label>
-            <input type="number" name="memoria[]" id="idade">
+            <input type="number" name="dados[]" id="idade">
           </div> <?php
-          } ?>
+          }?>
       <input type="submit" value="Enviar">
       </div><!--final da linha -->
     </form>
   </main> 
-  <table> <?php
 
-    $memoria = $_POST['memoria'];
-    foreach ($memoria as $id => $dados)
-      {
-      echo "<tr>";
-      foreach ($memoria[$id] as $cedula)
-        {
-        echo "<td>". $cedula. "</td>";
-        }
-      echo "</tr>";
-      } ?>
-  </table>
+  <article>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>Idade</th>
+        </tr>
+      </thead>
+
+      <tbody> <?php
+        $memoria = $_POST["dados"];
+        
+        // Dividimos o array em grupos de 3 (nome, sobrenome, idade)
+        $grupos = array_chunk($memoria, 3);
+
+        foreach ($grupos as $grupo) 
+          {
+          echo "<tr>";
+          foreach ($grupo as $valor) 
+            {
+            echo "<td>$valor</td>";
+            }
+          echo "</tr>";
+          }?>
+      </tbody>
+    </table>
+  </article>
     
 
 
