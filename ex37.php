@@ -44,16 +44,13 @@ session_start();//utilizando a session para preservar dados de um formulário, p
             } ?>
           <input type="submit" name="array" value="Enviar">
         </form><?php
-        if (isset($_POST["array"]))
+        if (isset($_POST["memoria"]))
           {
-          $memoria = (array)$_POST["memoria"];
-          $_SESSION["memoria"] = $memoria; // salvando o array na sessão
-          $soma = 0;
-          foreach ($memoria as $chave => $valor)
-            {
-            $soma += $valor;
-            }
-            echo "A média dos valores inseridos é ".($soma / 4)."<br>Maior valor inserido foi: ".max($memoria)." <br> Menor valor inserido foi: ".min($memoria)."<br>";
+          $_SESSION["memoria"] = (array)$_POST["memoria"]; // salvando o array na sessão
+          }
+        if (isset($_SESSION["memoria"]))
+          {
+          echo "A média dos valores inseridos é ".(array_sum($_SESSION["memoria"]) / 4)."<br>Maior valor inserido foi: ".max((array) $_SESSION["memoria"])." <br> Menor valor inserido foi: ".min((array) $_SESSION["memoria"])."<br>";
           }  ?>
       </div>
       <div class="col-sm-6">
@@ -62,7 +59,7 @@ session_start();//utilizando a session para preservar dados de um formulário, p
           <input type="number" name="numero" id="numero">
           <input type="submit" name="busca" value="Verificar">
         </form> <?php
-        if (isset($_POST["busca"]))
+        if (isset($_POST["numero"]))
           {
           $memoria = $_SESSION["memoria"]; //recuperar o valor armazenado na sessão
           $numero = $_POST["numero"];
