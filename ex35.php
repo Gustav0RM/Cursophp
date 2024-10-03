@@ -24,7 +24,7 @@
   </main> <?php
   if(isset($_POST["dado"]));
   {
-  $array = $_POST['dado'];
+  $array = $_POST["dado"];
   foreach ($array as $chave => $valor)
     {
     echo "<article>chave $chave e valor $valor</article>";

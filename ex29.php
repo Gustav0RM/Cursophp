@@ -10,6 +10,7 @@
 <body>
   <main>
     <form action="ex29.php" method="post">Identificando números <?php
+      $count_2 = 0;
       while ($count_2 < 5)
         {
         $count_2++; ?>
