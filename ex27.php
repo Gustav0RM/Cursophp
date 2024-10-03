@@ -29,35 +29,33 @@
 
     </p>
 
-  </main>
-
-  <article> <?php
-  $numeromin = $_POST["numeromin"] ?: 0;
-  $numeromax = $_POST["numeromax"] ?: 0;
-  $count = $numeromin + 1;
-  $soma = 0;
-  $quantidade = $numeromax - 2; // quantidade de números no intervalo
-
-  if ($numeromin < $numeromax)
+  </main> <?php
+  if (isset($_POST["numeromin"]))
     {
-      echo "<strong>Números do intervalo:</strong> ";
-
-      while ($count < $numeromax) 
+      $numeromin = $_POST["numeromin"] ?: 0;
+      $numeromax = $_POST["numeromax"] ?: 0;
+      $count = $numeromin + 1;
+      $soma = 0;
+      $quantidade = $numeromax - 2; // quantidade de números no intervalo
+    
+      if ($numeromin < $numeromax)
         {
-        echo $count . "\n"; //numeros no intervalo
-        $soma += $count; // soma dos números do intervalo, $soma = $soma + $count 
-        $count++;
-        }
-      echo "<br>";
-      echo "<br><strong>Quantidade de números no intervalo:</strong> " . $quantidade . "<br>";
-      echo "<br><strong>Soma entre os números do intervalo:</strong> " . $soma;
-    } 
-  else 
-    {
-    echo "O número mínimo precisa ser menor que o número máximo";
+        echo "<article>
+                <strong>Números do intervalo:</strong> ";
+        while ($count < $numeromax) 
+          {
+          echo $count . "\n"; //numeros no intervalo
+          $soma += $count; // soma dos números do intervalo, $soma = $soma + $count 
+          $count++;
+          }
+        echo "<strong>Quantidade de números no intervalo:</strong> " . $quantidade ."<br>
+              <strong>Soma entre os números do intervalo:</strong> " . $soma . "</article>";
+        } 
+      else 
+        {
+        echo "O número mínimo precisa ser menor que o número máximo";
+        } 
     } ?>
-
-  </article>
 
 </body>
 

@@ -46,7 +46,7 @@ session_start();//utilizando a session para preservar dados de um formulário, p
         </form><?php
         if (isset($_POST["memoria"]))
           {
-          $_SESSION["memoria"] = (array)$_POST["memoria"]; // salvando o array na sessão
+          $_SESSION["memoria"] = (array)$_POST["memoria"]; // salvando dados do formulário no array e salvando o array na session
           }
         if (isset($_SESSION["memoria"]))
           {

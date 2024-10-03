@@ -13,7 +13,7 @@
   <main>
     <form action="ex32.php" method="post">Série de Fibonacci
       <label for="repeticao">Numero de vezes que deve repetir</label>
-      <input type="number" name="repeticao" id="repeticao" min="2" max="11">
+      <input type="number" name="repeticao" id="repeticao" min="2" max="20">
       <input type="submit" value="Verificar">
     </form>
     <p class="navega">

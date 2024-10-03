@@ -25,28 +25,27 @@
 
     </p>
 
-  </main>
-
-  <article> <?php
-
-  $fator1 = $_POST["fator1"] ?: 0;
-  $fator2 = 0;
-  $produto = 0;
-
-  while ($fator2 < 11) 
+  </main> <?php
+  if (isset($_POST["fator1"]))
     {
-    $produto = $fator1 * $fator2;
-    echo
-    "<table>
-        <tr>
-          <td>$fator1 x $fator2 = $produto</td>
-        </tr>
-    </table>";
-    $fator2++;
-    }
-    ?>
-
-  </article>
+    $fator1 = $_POST["fator1"] ?: 0;
+    $fator2 = 0;
+    $produto = 0;
+  
+    while ($fator2 < 11) 
+      {
+      $produto = $fator1 * $fator2;
+      echo
+      "<section>
+        <table>
+          <tr>
+            <td>$fator1 x $fator2 = $produto</td>
+          </tr>
+        </table>
+      </section>";
+      $fator2++;
+      }
+    } ?>
 
 </body>
 

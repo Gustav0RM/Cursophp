@@ -60,9 +60,9 @@
       </thead>
       <tbody> <?php
 
-        if (isset ($_POST["dados"]));
+        if (isset($_POST["dados"]))
           {
-          $array_memoria = (array) $_POST['dados'];
+          $array_memoria = (array)$_POST["dados"];
           // Dividimos o array em grupos de 3, cada grupo com 1 nome, 1 sobrenome e 1 idade
           $grupos = array_chunk($array_memoria, 3);
           foreach ($grupos as $grupo) 
