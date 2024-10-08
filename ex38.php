@@ -30,10 +30,14 @@
       </form>
     </div>
   </main> <?php 
-  $matriz = [$nome_aluno = (array)$_POST["nome"], $nota_aluno = (array)$_POST["nota"]]; ?>
-  <section> <?=(var_dump($matriz)) ?></section>
-
-
+  if (isset($_POST["nome"],$_POST["nota"]))
+    {
+    $_SESSION["matriz"] = [$nome_aluno = (array)$_POST["nome"], $nota_aluno = (array)$_POST["nota"]];
+    foreach ($_SESSION["matriz"])
+      {
+      echo "<section></section>";
+      }
+    } ?>
 
 
 
