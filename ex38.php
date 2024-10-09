@@ -8,6 +8,7 @@
   <title>Array</title>
 </head>
 <body>
+  <?php session_start();?>
   <main>
     <div class="row m-0">
       <form action="ex38.php" method="post" >Notas 
@@ -29,15 +30,22 @@
         </div>
       </form>
     </div>
-  </main> <?php 
-  if (isset($_POST["nome"],$_POST["nota"]))
-    {
-    $_SESSION["matriz"] = [$nome_aluno = (array)$_POST["nome"], $nota_aluno = (array)$_POST["nota"]];
-    foreach ($_SESSION["matriz"])
-      {
-      echo "<section></section>";
-      }
-    } ?>
+  </main> 
+  <section>
+      <?php
+      if (isset($_POST["nome"],$_POST["nota"]))
+        {
+        $_SESSION["matriz"] = [$nome_aluno = (array)$_POST["nome"], $nota_aluno = (array)$_POST["nota"]];
+        foreach ($_SESSION["matriz"] as $subarray)
+          {
+          foreach ($subarray as $item)
+            {
+            echo $item;
+            }
+            echo "<br>";
+          }
+        } ?>
+  </section>
 
 
 
