@@ -11,41 +11,55 @@
   <?php session_start();?>
   <main>
     <div class="row m-0">
-      <form action="ex38.php" method="post" >Notas 
+      <form action="ex38.php" method="post">Notas 
         <div class="row m-0"><?php
           for ($count = 0; $count < 3; $count++)
             { ?>
             <div class="col-sm-4">
               <label for="nome">Nome do aluno</label>
-              <input type="text" name="nome[]" id="nome">
+              <input type="text" name="matriz[]" id="id">
               <label for="nota">Ciencias</label>
-              <input type="number" name="nota[]" id="nota">
+              <input type="number" name="matriz[]" id="id">
               <label for="nota">Matemática</label>
-              <input type="number" name="nota[]" id="nota">
+              <input type="number" name="matriz[]" id="id">
               <label for="nota">História</label>
-              <input type="number" name="nota[]" id="nota">
+              <input type="number" name="matriz[]" id="id">
             </div><?php
             } ?>
-            <input type="submit" value="Enviar">
+            <input type="submit" value="Enviar" name="formulario">
         </div>
       </form>
     </div>
   </main> 
-  <section>
       <?php
-      if (isset($_POST["nome"],$_POST["nota"]))
+      if (isset($_POST["formulario"]))
         {
-        $_SESSION["matriz"] = [$nome_aluno = (array)$_POST["nome"], $nota_aluno = (array)$_POST["nota"]];
-        foreach ($_SESSION["matriz"] as $subarray)
+        $_SESSION["matriz"] = (array) $_POST["matriz"];
+        $alunos = array_chunk($_SESSION["matriz"],4);
+        if (isset($_SESSION["matriz"]))
           {
-          foreach ($subarray as $item)
+          echo "<section>
+                  <table> Notas
+                    <tr>
+                      <th>Nome</th>
+                      <th> Ciências</th>
+                      <th> Matemática</th>
+                      <th> História</th>
+                    </tr>";
+          foreach ($alunos as $aluno)
             {
-            echo $item;
+            echo "<tr>";
+            foreach ($aluno as $dados)
+              {
+              echo "<td>$dados</td>";
+              }
             }
-            echo "<br>";
+          echo "</table></section>";
           }
-        } ?>
-  </section>
+        }
+         ?>
+
+ 
 
 
 
